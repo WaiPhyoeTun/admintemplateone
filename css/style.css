@@ -1,10 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&display=swap');
+:root{
+  --primary-color:#333;
+    }
+
+
 *{
 	box-sizing: border-box;
 }
+
 body{
-	font-family:'Lato', sans-serif;
+	font-family: 'Lato', sans-serif;
+	font-family: sans-serif;
 	background-color: #ddd;
+	font-size: 12px;
 
 	padding: 0;
 	margin: 0;
@@ -17,41 +25,81 @@ body{
 }
 
 .crossxs .lines1{
-   transform: rotate(-45deg) translate(-6px,6px);
+    transform: rotate(-45deg) translate(-6px,6px);
+    
 }
+
 .crossxs .lines2{
-	opacity: 0;
+   opacity: 0;
 }
+
 .crossxs .lines3{
-	transform: rotate(45deg) translate(-6px,-6px);
+   transform: rotate(45deg) translate(-6px,-6px);
+  
 }
-/*Start left side bar*/
-.sidebars{
-	min-height: 100vh;
-	background-color: #333;
-}
-.sidebarlinks{
-	opacity: .75;
-	transition: all .5s;
-    position: relative;
-}
-.sidebarlinks:hover{
-	opacity: 1;
-	background-color: #555;
-}
-.currents{
-	box-shadow: -2px 0 10px #111;
-	opacity: 1;
-	transition: all .3s;
-}
-.currents:hover{
-	transform: translateY(-1px);
-}
-.mores{
+
+/*Start Left Sidebar Section*/
+/*start left sidebar*/
+   .sidebars{
+        min-height: 100vh;
+        background-color: var(--primary-color);
+   }
+
+   .sidebarlinks{
+   	opacity: .75;
+   	transition: all .4s;
+
+   	position: relative;
+   }
+
+   .sidebarlinks:hover{
+   	opacity: 1;
+   	background-color: #555;
+   }
+
+   .currents{
+   	box-shadow: -2px 0 10px #111;
+   	opacity: 1;
+   	transition: transform .3s;
+   }
+
+   .currents:hover{
+   	transform: translateY(-1px);
+   }
+
+   .mores{
     position: absolute;
     right: 20px;
     top: 50%;
 
     transform: translateY(-50%);
-}
-/*End left side bar*/
+   }
+   /*end left sidebar*/
+   
+/*End Left Sidebar Section*/
+
+
+/*Start Top Sidebar*/
+  /*start top sidebar*/
+   .topnavbars{
+    background-color: var(--primary-color);
+   }
+   
+
+   .iconparents{
+    position: relative;
+   }
+
+   .iconbullets::after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+
+    position: absolute;
+    left: 20px;
+    top: 5px;
+   }
+  /*end top sidebar*/
+/*ENd Top Sidebar*/
